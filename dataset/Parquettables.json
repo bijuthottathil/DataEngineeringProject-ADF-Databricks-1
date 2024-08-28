@@ -1,0 +1,187 @@
+{
+	"name": "Parquettables",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "lnkadlsprogressdb",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"schemaname": {
+				"type": "string"
+			},
+			"tablename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@{concat(dataset().tablename,'.','parquet')}",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@{concat(dataset().schemaname,'/',dataset().tablename)}",
+					"type": "Expression"
+				},
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": [
+			{
+				"name": "productkey",
+				"type": "INT32"
+			},
+			{
+				"name": "productalternatekey",
+				"type": "UTF8"
+			},
+			{
+				"name": "productsubcategorykey",
+				"type": "INT32"
+			},
+			{
+				"name": "weightunitmeasurecode",
+				"type": "UTF8"
+			},
+			{
+				"name": "sizeunitmeasurecode",
+				"type": "UTF8"
+			},
+			{
+				"name": "englishproductname",
+				"type": "UTF8"
+			},
+			{
+				"name": "spanishproductname",
+				"type": "UTF8"
+			},
+			{
+				"name": "frenchproductname",
+				"type": "UTF8"
+			},
+			{
+				"name": "standardcost",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "finishedgoodsflag",
+				"type": "BOOLEAN"
+			},
+			{
+				"name": "color",
+				"type": "UTF8"
+			},
+			{
+				"name": "safetystocklevel",
+				"type": "INT32"
+			},
+			{
+				"name": "reorderpoint",
+				"type": "INT32"
+			},
+			{
+				"name": "listprice",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "size",
+				"type": "UTF8"
+			},
+			{
+				"name": "sizerange",
+				"type": "UTF8"
+			},
+			{
+				"name": "weight",
+				"type": "FLOAT"
+			},
+			{
+				"name": "daystomanufacture",
+				"type": "INT32"
+			},
+			{
+				"name": "productline",
+				"type": "UTF8"
+			},
+			{
+				"name": "dealerprice",
+				"type": "DECIMAL",
+				"precision": 38,
+				"scale": 18
+			},
+			{
+				"name": "class",
+				"type": "UTF8"
+			},
+			{
+				"name": "style",
+				"type": "UTF8"
+			},
+			{
+				"name": "modelname",
+				"type": "UTF8"
+			},
+			{
+				"name": "largephoto",
+				"type": "BINARY"
+			},
+			{
+				"name": "englishdescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "frenchdescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "chinesedescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "arabicdescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "hebrewdescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "thaidescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "germandescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "japanesedescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "turkishdescription",
+				"type": "UTF8"
+			},
+			{
+				"name": "startdate",
+				"type": "INT96"
+			},
+			{
+				"name": "enddate",
+				"type": "INT96"
+			},
+			{
+				"name": "status",
+				"type": "UTF8"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

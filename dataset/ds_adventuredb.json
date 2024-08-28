@@ -1,0 +1,17 @@
+{
+	"name": "ds_adventuredb",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PostgreSql1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "PostgreSqlV2Table",
+		"schema": [],
+		"typeProperties": {
+			"schema": "public",
+			"table": "dimproduct"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

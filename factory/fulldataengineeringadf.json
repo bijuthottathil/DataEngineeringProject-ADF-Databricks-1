@@ -1,0 +1,9 @@
+{
+	"name": "fulldataengineeringadf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b35bd1e1-d906-4e8d-b73b-78db5d482e0c",
+		"tenantId": "50c70d3e-8356-4111-82d3-3fb1deae449b"
+	}
+}
