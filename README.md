@@ -107,4 +107,11 @@ Silver to Gold transformation in Databricks cluster is here
 
 ![image](https://github.com/user-attachments/assets/26487e5b-fd7a-40ce-b661-670f9d2ff090)
 
+Instead of Synapse and PowerBI , accessed Parquet data directly in Microsoft Farbric note book wrangler feature
+
+![image](https://github.com/user-attachments/assets/3f18fdf1-17d7-4baf-8239-7c892c9c8c16)
+
+
+
+
 
